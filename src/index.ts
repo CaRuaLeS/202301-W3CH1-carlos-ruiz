@@ -1,42 +1,8 @@
-console.log('Loaded APP');
+import { King } from './king';
+import { Fighter } from './fighter';
 
-const language = 'JS';
-const template = `
-  <p id="p1"></p>
-  <p id="p2"></p>
-  <div>
-    <button>Pintar</button>
-  </div>
-  <section>
-    <input>
-    <button>Salvar</button>
-    <output>
-  </section>
-`;
+const king1 = new King('Peter', 'Collado', 23, true, 4);
+const fighter1 = new Fighter('Peter', 'Collado', 23, true, 'Hammer', 5);
 
-document.querySelector('#root')!.innerHTML = template;
-
-// Localizar
-const element1 = document.querySelector('p#p1');
-const element2 = document.querySelector('p#p2');
-// eslint-disable-next-line no-unused-vars
-const elements = document.querySelectorAll('p');
-
-// Modificar
-const handlerClick = () => {
-  element1!.innerHTML = `Esto esta en <strong>${language}</strong>`;
-  element2!.outerHTML = `Esto esta en <strong>${language}</strong>`;
-  // Improve element1?.insertAdjacentHTML()
-};
-
-const button = document.querySelector('div button');
-button!.addEventListener('click', handlerClick);
-
-const section = document.querySelector('section');
-const input = section!.querySelector('input');
-const output = section!.querySelector('output');
-const buttonSalvar = section!.querySelector('button');
-buttonSalvar!.addEventListener('click', () => {
-  output!.value += input!.value;
-  input!.value = '';
-});
+console.log(king1.greetings());
+console.log(fighter1.greetings());
