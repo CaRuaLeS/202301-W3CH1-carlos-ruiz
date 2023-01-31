@@ -1,19 +1,21 @@
 import { Fighter } from './fighter';
+import { Squire } from './squire';
 
 describe('Given the king class extend from the character', () => {
   describe('When you create a new king', () => {
     const fighter = new Fighter('Pepe', 'Fernandez', 23, 'Martillo', 5);
+    const squire = new Squire('Pepe', 'Fernandez', 23, fighter, 5);
     test('Then it values should be filled', () => {
-      expect(fighter).toHaveProperty('weapon');
-      expect(fighter).toHaveProperty('dexterity');
+      expect(squire).toHaveProperty('whoServes');
+      expect(squire).toHaveProperty('service');
     });
     test('Then if you call the die function', () => {
-      fighter.die();
-      expect(fighter.isAlive).toBe(false);
+      squire.die();
+      expect(squire.isAlive).toBe(false);
     });
     test('Then if you call the die function', () => {
-      expect(fighter.greetings()).toBe(
-        'Pepe de la familia Fernandez: Primero pego y luego pregunto'
+      expect(squire.greetings()).toBe(
+        'Pepe de la familia Fernandez: Soy un loser'
       );
     });
   });

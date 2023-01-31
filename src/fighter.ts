@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Character } from './character';
 
 export class Fighter extends Character {
@@ -5,13 +6,10 @@ export class Fighter extends Character {
     charName: string,
     family: string,
     age: number,
-    isAlive: boolean,
     public weapon: string,
     public dexterity: number
   ) {
-    super(charName, family, age, isAlive);
-    this.weapon = weapon;
-    this.dexterity = dexterity;
+    super(charName, family, age);
   }
 
   greetings(): string {
