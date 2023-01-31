@@ -7,7 +7,8 @@ export class Squire extends Character {
     charName: string,
     family: string,
     age: number,
-    public whoServes: Fighter
+    public whoServes: Fighter,
+    public service: number
   ) {
     super(charName, family, age);
   }
