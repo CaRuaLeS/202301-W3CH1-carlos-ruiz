@@ -2,7 +2,7 @@ import { Character } from './character';
 
 describe('Given the character class', () => {
   describe('When you create a new character', () => {
-    const char = new Character('Pepe', 'Fernandez', 23, true);
+    const char = new Character('Pepe', 'Fernandez', 23);
     test('Then it values should be filled', () => {
       expect(char).toHaveProperty('charName');
       expect(char).toHaveProperty('family');

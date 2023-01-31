@@ -1,14 +1,12 @@
+/* eslint-disable no-unused-vars */
 export class Character {
+  public isAlive: boolean;
   constructor(
     public charName: string,
     public family: string,
-    public age: number,
-    public isAlive: boolean
+    public age: number
   ) {
-    this.charName = charName;
-    this.family = family;
-    this.age = age;
-    this.isAlive = isAlive;
+    this.isAlive = true;
   }
 
   die() {
